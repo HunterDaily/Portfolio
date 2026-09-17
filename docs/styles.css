@@ -204,7 +204,50 @@ a {
     align-items: stretch;
     gap: 5%;
     margin-top: 10%;
-    margin-left:18%
+    text-align: center;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 30px;
+    border: 2px solid #000;
+    border-radius: 12px;
+    min-width: 160px;
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+    text-decoration: none;
+}
+
+.contact-item:visited {
+    color: inherit;
+}
+
+.contact-item img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.contact-item span {
+    font-size: 130%;
+    font-weight: bold;
+}
+
+.contact-email {
+    text-align: center;
+    margin-top: 8%;
+    font-size: 150%;
+    padding: 0 10%;
+    word-break: break-word;
 }
 
 /* ============================
@@ -236,14 +279,22 @@ a {
     }
 
     div.header {
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
         text-align: center;
     }
 
     .nav-links {
         width: 100%;
-        justify-content: center;
-        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 10px 15px;
+        margin-top: 8px;
+    }
+
+    .nav-links a {
+        padding: 6px 8px;
     }
 
     div.logo {
@@ -288,8 +339,16 @@ a {
     .certificate-container-right {
         flex-direction: column;
         margin-left: 0;
+        margin-right: 0;
         text-align: center;
         gap: 5%;
+    }
+
+    .certificate-container-left img,
+    .certificate-container-right img {
+        max-width: 70%;
+        height: auto;
+        max-height: 250px;
     }
 
     .certificate-container-left-text h1,
@@ -327,9 +386,18 @@ a {
 
     /* Contact section */
     .contact-container {
-        margin-left: 5%;
-        flex-direction: column;
-        text-align: center;
+        margin-top: 15%;
+        gap: 20px;
+    }
+
+    .contact-item {
+        min-width: 45%;
+        padding: 15px 20px;
+    }
+
+    .contact-email {
+        font-size: 120%;
+        margin-top: 12%;
     }
 }
 
